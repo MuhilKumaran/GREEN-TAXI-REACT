@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <div class="container login-container">
+      <div class="container login-container px-6">
         <h2 class="text-center mb-4 login-tit">Login</h2>
-        <form>
+        <form action="#" method="post">
           <div className="form-group">
             <select class="form-select" id="userRole">
               <option value="customer">Customer</option>
@@ -34,13 +34,15 @@ const Login = () => {
             />
           </div>
           <br></br>
+          <Link to="/forgotPassword">
+            <p className="text-center">Forgot Password? </p>
+          </Link>
           <center>
             <button type="submit" class="btn btn-primary btn-block btn-login">
               Login
             </button>
           </center>
           <div class="text-center mt-3">
-            Forgot Password?{" "}
             <Link to="/signup">
               <p class="s-up">SignUp</p>
             </Link>

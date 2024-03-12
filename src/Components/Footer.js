@@ -32,11 +32,17 @@ const Footer = () => {
         <div class="col-md-4 col-12 green-taxi">
           <h2>Info</h2>
           <ul class="detail">
-            <li>Become a Driver</li>
+            <Link to="/becomeDriver" className="links">
+              <li>Become a Driver</li>
+            </Link>
             <br />
-            <li>Privacy and Policy</li>
+            <Link to="privacyAndPolicy" className="links">
+              <li>Privacy and Policy</li>
+            </Link>
             <br />
-            <li>Terms and Condition</li>
+            <Link to="termsAndCondition" className="links">
+              <li>Terms and Condition</li>
+            </Link>
           </ul>
         </div>
         <div class="col-md-4 col-12 green-taxi">
