@@ -34,8 +34,7 @@ const Booking = () => {
           <br></br>
         </div>
       </div>
-      
-      
+
       <div class="container">
         <div class="row justify-content-center ">
           <div class="col-md-6 formdiv">
@@ -45,7 +44,7 @@ const Booking = () => {
             >
               START BOOKING
             </h2>
-            <form>
+            <form action="#" method="post">
               <div class="mb-3">
                 <label for="name" class="form-label">
                   Name
@@ -113,7 +112,7 @@ const Booking = () => {
                 ></textarea>
               </div>
               <center>
-                <button type="submit" class="sub">
+                <button type="submit" class="btn btn-primary sub">
                   Book Now
                 </button>
               </center>

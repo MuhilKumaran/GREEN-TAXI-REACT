@@ -8,6 +8,13 @@ const Login = () => {
       <div class="container login-container">
         <h2 class="text-center mb-4 login-tit">Login</h2>
         <form>
+          <div className="form-group">
+            <select class="form-select" id="userRole">
+              <option value="customer">Customer</option>
+              <option value="admin">Admin</option>
+              <option value="driver">Driver</option>
+            </select>
+          </div>
           <div class="form-group">
             <label for="emailMobile">Email/Mobile No:</label>
             <input
