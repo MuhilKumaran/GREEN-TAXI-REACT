@@ -7,90 +7,90 @@ const Driver = () => {
       <div className="container-fluid px-4">
         <div className="row justify-content-center">
           <div className="col-md-5 driver-container">
-            <h2 class="text-center mb-4 driver-title">Become a Driver</h2>
+            <h2 className="text-center mb-4 driver-title">Become a Driver</h2>
             <form action="#" method="post">
-              <div class="mb-3">
-                <label for="FullName" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="FullName" className="form-label">
                   Full Name
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="FullName"
                   placeholder="Enter Full Name"
                 />
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
                   Email Address
                 </label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   placeholder="Enter Email"
                 />
               </div>
-              <div class="mb-3">
-                <label for="mobile" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="mobile" className="form-label">
                   Mobile No
                 </label>
                 <input
                   type="tel"
-                  class="form-control"
+                  className="form-control"
                   id="mobile"
                   placeholder="Enter Mobile No"
                 />
               </div>
-              <div class="mb-3">
-                <label for="licence" class="form-label">
-                  Upload your Driving Licence
+              <div className="mb-3">
+                <label htmlFor="licence" className="form-label">
+                  Upload your Driving Licence (As pdf)
                 </label>
-                <input type="file" class="form-control" id="licence" />
+                <input type="file" accept=".pdf" className="form-control" id="licence" />
               </div>
-              <div class="mb-3">
-                <label for="gender" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="gender" className="form-label">
                   Gender
                 </label>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="gender"
                     id="male"
                     value="male"
                   />
-                  <label class="form-check-label" for="male">
+                  <label className="form-check-label" htmlFor="male">
                     Male
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="gender"
                     id="female"
                     value="female"
                   />
-                  <label class="form-check-label" for="female">
+                  <label className="form-check-label" htmlFor="female">
                     Female
                   </label>
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="experience" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="experience" className="form-label">
                   Years Of Experience
                 </label>
                 <input
                   type="number"
-                  class="form-control"
+                  className="form-control"
                   id="experience"
                   placeholder="Years of Experience"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <center>
-                  <input type="submit" class="btn btn-primary" />
+                  <input type="submit" className="btn btn-primary" />
                 </center>
               </div>
             </form>

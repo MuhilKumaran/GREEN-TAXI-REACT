@@ -20,7 +20,7 @@ const Navbar = () => {
         style={{ backgroundColor: "#41b31d" }}
       >
         <div className="container">
-          <h1 style={{ color: "white" }}>Green Taxi</h1>
+          <h2 style={{ color: "white" }}>Green Taxi</h2>
           <button
             className="navbar-toggler"
             type="button"
@@ -34,13 +34,13 @@ const Navbar = () => {
             }`}
             id="myNavBar"
           >
-            <ul className="navbar-nav ms-auto nav-list" style={{ gap: "10px" }}>
+            <ul className="navbar-nav ms-auto nav-list" style={{ gap: "5px" }}>
               <li className="nav-item">
                 <Link
                   to="/"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   Home
                 </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
                   to="/booking"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   Booking
                 </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
                   to="/contact"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   Contact
                 </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
                   to="/support"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   Support
                 </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
                   to="/aboutus"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   About US
                 </Link>
@@ -90,12 +90,11 @@ const Navbar = () => {
                   to="/signup"
                   className="nav-link nav-text"
                   onClick={closeNavbar}
-                  style={{color:"snow"}}
+                  style={{ color: "snow" }}
                 >
                   Sign Up/Login
                 </Link>
               </li>
-              
             </ul>
           </div>
         </div>

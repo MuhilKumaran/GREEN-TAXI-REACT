@@ -5,58 +5,58 @@ const Support = () => {
   return (
     <div>
       <br></br>
-      <div class="container px-4">
+      <div className="container px-4">
         
-        <div class="row justify-content-center">
+        <div className="row justify-content-center">
         
-          <div class="col-md-6 form-container">
+          <div className="col-md-6 form-container">
             <form action="#" method="post">
-              <div class="form-group">
-              <h2 class="text-center mb-4 sup-tit">Support</h2>
-                <label for="name">Name:</label>
+              <div className="form-group">
+              <h2 className="text-center mb-4 sup-tit">Support</h2>
+                <label htmlFor="name">Name:</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   name="name"
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
+              <div className="form-group">
+                <label htmlFor="email">Email:</label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   name="email"
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="mobile">Mobile:</label>
+              <div className="form-group">
+                <label htmlFor="mobile">Mobile:</label>
                 <input
                   type="tel"
-                  class="form-control"
+                  className="form-control"
                   id="mobile"
                   name="mobile"
                   pattern="[0-9]{10}"
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="city">City:</label>
+              <div className="form-group">
+                <label htmlFor="city">City:</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="city"
                   name="city"
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="feedback">Feedback Type:</label>
+              <div className="form-group">
+                <label htmlFor="feedback">Feedback Type:</label>
                 <select
-                  class="form-select"
+                  className="form-select"
                   id="feedback"
                   name="feedback"
                   required
@@ -65,10 +65,10 @@ const Support = () => {
                   <option value="feedback">Feedback</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="message">Your Message:</label>
+              <div className="form-group">
+                <label htmlFor="message">Your Message:</label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   name="message"
                   rows="4"
@@ -77,7 +77,7 @@ const Support = () => {
               </div>
               <br />
               <center>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </center>

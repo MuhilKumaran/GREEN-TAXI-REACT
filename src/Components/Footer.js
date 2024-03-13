@@ -3,35 +3,35 @@ import { Link } from "react-router-dom";
 import "../Styles/footerStyle.css";
 const Footer = () => {
   return (
-    <div class="container-fluid footer">
-      <div class="row">
-        <div class="col-md-4 col-12 green-taxi">
+    <div className="container-fluid footer">
+      <div className="row">
+        <div className="col-md-4 col-12 green-taxi">
           <h2 style={{ color: "snow" }}>About Green Taxi</h2>
-          <ul class="detail">
-            <Link to="/" class="links">
+          <ul className="detail">
+            <Link to="/" className="links">
               <li>Home</li>
             </Link>
             <br />
-            <Link to="/booking" class="links">
+            <Link to="/booking" className="links">
               <li>Booking</li>
             </Link>
             <br />
-            <Link to="/contact" class="links">
+            <Link to="/contact" className="links">
               <li>Contact</li>
             </Link>
             <br />
-            <Link to="/support" class="links">
+            <Link to="/support" className="links">
               <li>Support</li>
             </Link>
             <br />
-            <Link to="/aboutus" class="links">
+            <Link to="/aboutus" className="links">
               <li>About US</li>
             </Link>
           </ul>
         </div>
-        <div class="col-md-4 col-12 green-taxi">
+        <div className="col-md-4 col-12 green-taxi">
           <h2>Info</h2>
-          <ul class="detail">
+          <ul className="detail">
             <Link to="/becomeDriver" className="links">
               <li>Become a Driver</li>
             </Link>
@@ -45,13 +45,13 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
-        <div class="col-md-4 col-12 green-taxi">
+        <div className="col-md-4 col-12 green-taxi">
           <h2>Availability</h2>
           <br />
           <ul>
             <li>
-              <i class="fa-brands fa-google-play fa-2xl store"></i> &nbsp;
-              &nbsp; <i class="fa-brands fa-app-store-ios fa-2xl store"></i>
+              <i className="fa-brands fa-google-play fa-2xl store"></i> &nbsp;
+              &nbsp; <i className="fa-brands fa-app-store-ios fa-2xl store"></i>
             </li>
           </ul>
           <br></br>
@@ -59,11 +59,11 @@ const Footer = () => {
           <br />
           <ul>
             <li>
-              <i class="fa-brands fa-facebook fa-2xl facebook"></i>&nbsp;
+              <i className="fa-brands fa-facebook fa-2xl facebook"></i>&nbsp;
               &nbsp;&nbsp;
-              <i class="fa-brands fa-whatsapp fa-2xl whatsapp"></i> &nbsp;
+              <i className="fa-brands fa-whatsapp fa-2xl whatsapp"></i> &nbsp;
               &nbsp;&nbsp;
-              <i class="fa-brands fa-instagram fa-2xl instagram"></i>
+              <i className="fa-brands fa-instagram fa-2xl instagram"></i>
             </li>
           </ul>
         </div>

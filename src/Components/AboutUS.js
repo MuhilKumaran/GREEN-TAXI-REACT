@@ -11,7 +11,9 @@ const AboutUS = () => {
         </div>
         <div className="row">
           <div className="col-12 head d-flex align-items-center justify-content-center">
-            <center><h2 >About US</h2></center>
+            <center>
+              <h2>About US</h2>
+            </center>
           </div>
         </div>
         <div className="row">
@@ -23,7 +25,7 @@ const AboutUS = () => {
           <br></br>
         </div>
         <div className="row">
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2>Environmentally Friendly</h2>
             <p>
               One of the most significant advantages of electric vehicle cabs is
@@ -33,7 +35,7 @@ const AboutUS = () => {
             </p>
           </div>
 
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2> Quiet and Comfortable</h2>
             <p>
               Electric vehicles are known for their quiet operation compared to
@@ -43,7 +45,7 @@ const AboutUS = () => {
             </p>
           </div>
 
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2>Cost Savings</h2>
             <p>
               While the upfront cost of electric vehicles can be higher than
@@ -58,7 +60,7 @@ const AboutUS = () => {
           <br></br>
         </div>
         <div className="row">
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2>Regenerative Braking</h2>
             <p>
               Many electric vehicle cabs are equipped with regenerative braking
@@ -68,7 +70,7 @@ const AboutUS = () => {
             </p>
           </div>
 
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2>Government Incentives</h2>
             <p>
               Many governments around the world offer incentives, subsidies, and
@@ -79,7 +81,7 @@ const AboutUS = () => {
             </p>
           </div>
 
-          <div class="col-md-4 col-12 cards">
+          <div className="col-md-4 col-12 cards">
             <h2>Charging Infrastructure</h2>
             <p>
               The expansion of charging infrastructure is a crucial factor for

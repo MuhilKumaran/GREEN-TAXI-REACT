@@ -16,12 +16,12 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <div>
-      <div class="container-fluid px-5">
-        <div class="row">
+      <div className="container-fluid px-5">
+        <div className="row">
           <br></br>
         </div>
-        <div class="row d-flex justify-content-between">
-          <div class="col-md-6 col-12 note">
+        <div className="row d-flex justify-content-between">
+          <div className="col-md-6 col-12 note">
             <h2>First Time in Coimbatore</h2>
             <p>
               Introducing Us{" "}
@@ -31,7 +31,7 @@ const Home = () => {
               Electric Vehicle!
             </p>
           </div>
-          <div class="col-12  col-md-4">
+          <div className="col-12  col-md-4">
             <iframe
               width={"100%"}
               height={"250px"}
@@ -47,18 +47,18 @@ const Home = () => {
             </iframe>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           <br></br>
         </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <div class="card-img">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-4 col-12">
+            <div className="card-img">
               <img src={ola2} alt="e-car" width="100%" height="260px" />
             </div>
-            <div class="card-text">
+            <div className="card-text">
               <p>
                 Prime Hatchbacks to Prime Sedans and Prime SUVs,you will find a
                 ride in your budget at your convenience any time.
@@ -66,11 +66,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div class="col-md-4 col-12">
-            <div class="card-img">
+          <div className="col-md-4 col-12">
+            <div className="card-img">
               <img src={ola2} alt="e-car" width="100%" height="260px" />
             </div>
-            <div class="card-text">
+            <div className="card-text">
               <p>
                 Book rides within the city with Daily, or take a trip to your
                 favourite destinations outside the city with your Outstation.
@@ -78,11 +78,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div class="col-md-4 col-12">
-            <div class="card-img">
+          <div className="col-md-4 col-12">
+            <div className="card-img">
               <img src={ola3} alt="e-car" width="100%" height="260px" />
             </div>
-            <div class="card-text">
+            <div className="card-text">
               <p>
                 Easily plan a day out without having to worry about conveyance
                 with an hour-based package from Rental.
@@ -90,46 +90,46 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           <br></br>
         </div>
       </div>
 
-      {/* <div class="container fluid">
+      {/* <div className="container fluid">
         <div
           id="carouselExampleInterval"
-          class="carousel slide"
+          className="carousel slide"
           data-bs-ride="carousel"
           
         >
-          <div class="carousel-inner bg-primary" style={{height:"300px",width:"100%"}}>
-            <div class="carousel-item active" data-bs-interval="2000">
-              <img src={ola2} class="d-block" width={"100%"} height={"300px"} alt="..." />
+          <div className="carousel-inner bg-primary" style={{height:"300px",width:"100%"}}>
+            <div className="carousel-item active" data-bs-interval="2000">
+              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src={ola2} class="d-block" width={"100%"} height={"300px"} alt="..." />
+            <div className="carousel-item" data-bs-interval="2000">
+              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src={ola2} class="d-block" width={"100%"} height={"300px"} alt="..." />
+            <div className="carousel-item" data-bs-interval="2000">
+              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
             </div>
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </div> */}

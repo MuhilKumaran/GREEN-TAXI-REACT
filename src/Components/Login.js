@@ -5,30 +5,30 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <div class="container login-container px-6">
-        <h2 class="text-center mb-4 login-tit">Login</h2>
+      <div className="container login-container px-6">
+        <h2 className="text-center mb-4 login-tit">Login</h2>
         <form action="#" method="post">
           <div className="form-group">
-            <select class="form-select" id="userRole">
+            <select className="form-select" id="userRole">
               <option value="customer">Customer</option>
               <option value="admin">Admin</option>
               <option value="driver">Driver</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="emailMobile">Email/Mobile No:</label>
+          <div className="form-group">
+            <label htmlFor="emailMobile">Email/Mobile No:</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="emailMobile"
               placeholder="Enter email/mobile"
             />
           </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="password"
               placeholder="Enter password"
             />
@@ -38,13 +38,13 @@ const Login = () => {
             <p className="text-center">Forgot Password? </p>
           </Link>
           <center>
-            <button type="submit" class="btn btn-primary btn-block btn-login">
+            <button type="submit" className="btn btn-primary btn-block btn-login">
               Login
             </button>
           </center>
-          <div class="text-center mt-3">
+          <div className="text-center mt-3">
             <Link to="/signup">
-              <p class="s-up">SignUp</p>
+              <p className="s-up">SignUp</p>
             </Link>
           </div>
         </form>

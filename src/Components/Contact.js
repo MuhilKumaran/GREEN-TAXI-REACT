@@ -33,17 +33,17 @@ const Contact = () => {
         {/* <div className="row">
           <div className="col-md-4 col-12 d-flex align-items-center">
             <h4>
-              <i class="fa-solid fa-phone fa-2xl"></i> +91 9342407556
+              <i className="fa-solid fa-phone fa-2xl"></i> +91 9342407556
             </h4>
           </div>
           <div className="col-md-4 col-12 d-flex ">
             <h4>
-              <i class="fa-solid fa-message fa-2xl"></i> info@greentaxi.com
+              <i className="fa-solid fa-message fa-2xl"></i> info@greentaxi.com
             </h4>
           </div>
           <div className="col-md-4 col-12 d-flex ">
             <h4>
-              <i class="fa-solid fa-message fa-2xl"></i>support@greentaxi.com
+              <i className="fa-solid fa-message fa-2xl"></i>support@greentaxi.com
             </h4>
           </div>
         </div> */}
@@ -53,23 +53,23 @@ const Contact = () => {
           <br></br>
         </div>
         <div className="row address-box">
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Head Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Head Office</h3>
 
             <p>
               Eagle Fleet Services (P) Ltd, #1226, Magudam Towers, Mettupalayam
               Road, Saibaba Colony, Coimbatore - 641043. Landline: 0422 4567890
             </p>
           </div>
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Branch Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Branch Office</h3>
             <p>
               67-71, Dr Krishnasamy Mudaliyar Rd, Brookefields, Sukrawar Pettai,
               Ram Nagar, Coimbatore, Tamil Nadu 641001
             </p>
           </div>
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Branch Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Branch Office</h3>
             <p>
               96, Broadway Square, off Avinashi Road, Indira Nagar, Civil
               Aerodrome Post, Coimbatore, Tamil Nadu 6410145
@@ -80,22 +80,22 @@ const Contact = () => {
           <br></br>
         </div>
         <div className="row address-box">
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Head Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Head Office</h3>
             <p>
               Eagle Fleet Services (P) Ltd, #1226, Magudam Towers, Mettupalayam
               Road, Saibaba Colony, Coimbatore - 641043. Landline: 0422 4567890
             </p>
           </div>
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Branch Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Branch Office</h3>
             <p>
               67-71, Dr Krishnasamy Mudaliyar Rd, Brookefields, Sukrawar Pettai,
               Ram Nagar, Coimbatore, Tamil Nadu 641001
             </p>
           </div>
-          <div class="col-md-4 col-12">
-            <h3 class="office-title">Branch Office</h3>
+          <div className="col-md-4 col-12">
+            <h3 className="office-title">Branch Office</h3>
             <p>
               96, Broadway Square, off Avinashi Road, Indira Nagar, Civil
               Aerodrome Post, Coimbatore, Tamil Nadu 6410145
