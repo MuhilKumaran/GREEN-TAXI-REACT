@@ -36,12 +36,12 @@ const Footer = () => {
               <li>Become a Driver</li>
             </Link>
             <br />
-            <Link to="privacyAndPolicy" className="links">
+            <Link to="/privacyAndPolicy" className="links">
               <li>Privacy and Policy</li>
             </Link>
             <br />
-            <Link to="termsAndCondition" className="links">
-              <li>Terms and Condition</li>
+            <Link to="/termsAndCondition" className="links">
+              <li>Terms and Conditions</li>
             </Link>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Corousel from "../Components/Corousel";
 const Booking = () => {
   return (
-    <div>
+    <div className="body-box">
       <div className="container-fluid px-5">
         <div className="row">
           <br></br>
@@ -75,6 +75,27 @@ const Booking = () => {
                   Pick Up Date
                 </label>
                 <input type="date" className="form-control" id="pick-date" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="drop-city" className="form-label">
+                  Pick Up Location
+                </label>
+                <br></br>
+
+                <select className="form-select">
+                  <option value="mylocation" className="coimbatore">
+                    My Location
+                  </option>
+                  <option value="Trichy" className="trichy">
+                    Trichy
+                  </option>
+                  <option value="Chennai" className="chennai">
+                    Chennai
+                  </option>
+                  <option value="Tanjore" className="tanjore">
+                    Tanjore
+                  </option>
+                </select>
               </div>
               <div className="mb-3">
                 <label htmlFor="pick-time" className="form-label">

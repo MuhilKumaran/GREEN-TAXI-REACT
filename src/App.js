@@ -9,6 +9,8 @@ import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import Support from "./Components/Support";
 import Driver from "./Components/Driver";
+import PrivacyAndPolicy from "./Components/PrivacyAndPolicy";
+import TermsAndCondition from "./Components/TermsAndCondition";
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/login" Component={Login} />
         <Route path="/support" Component={Support} />
         <Route path="/becomeDriver" Component={Driver}/>
+        <Route path="/privacyAndPolicy" Component={PrivacyAndPolicy}/>
+        <Route path="/termsAndCondition" Component={TermsAndCondition}/>
       </Routes>
     </>
   );

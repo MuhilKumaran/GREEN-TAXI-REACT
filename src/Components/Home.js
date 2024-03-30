@@ -15,8 +15,8 @@ import Footer from "./Footer";
 // import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Home = () => {
   return (
-    <div>
-      <div className="container-fluid px-5">
+    <div className="body-box">
+      <div className="container-fluid px-5 ">
         <div className="row">
           <br></br>
         </div>
