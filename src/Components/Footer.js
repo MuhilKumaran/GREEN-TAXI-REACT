@@ -2,29 +2,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/footerStyle.css";
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   return (
     <div className="container-fluid footer">
       <div className="row">
         <div className="col-md-4 col-12 green-taxi">
           <h2 style={{ color: "snow" }}>About Green Taxi</h2>
           <ul className="detail">
-            <Link to="/" className="links">
+            <Link to="/" className="links" onClick={scrollToTop}>
               <li>Home</li>
             </Link>
             <br />
-            <Link to="/booking" className="links">
+            <Link to="/booking" className="links" onClick={scrollToTop}>
               <li>Booking</li>
             </Link>
             <br />
-            <Link to="/contact" className="links">
+            <Link to="/contact" className="links" onClick={scrollToTop}>
               <li>Contact</li>
             </Link>
             <br />
-            <Link to="/support" className="links">
+            <Link to="/support" className="links" onClick={scrollToTop}>
               <li>Support</li>
             </Link>
             <br />
-            <Link to="/aboutus" className="links">
+            <Link to="/aboutus" className="links" onClick={scrollToTop}>
               <li>About US</li>
             </Link>
           </ul>
@@ -32,15 +38,15 @@ const Footer = () => {
         <div className="col-md-4 col-12 green-taxi">
           <h2>Info</h2>
           <ul className="detail">
-            <Link to="/becomeDriver" className="links">
+            <Link to="/becomeDriver" className="links" onClick={scrollToTop}>
               <li>Become a Driver</li>
             </Link>
             <br />
-            <Link to="/privacyAndPolicy" className="links">
+            <Link to="/privacyAndPolicy" className="links" onClick={scrollToTop}>
               <li>Privacy and Policy</li>
             </Link>
             <br />
-            <Link to="/termsAndCondition" className="links">
+            <Link to="/termsAndCondition" className="links" onClick={scrollToTop}>
               <li>Terms and Conditions</li>
             </Link>
           </ul>
