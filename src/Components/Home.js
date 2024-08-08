@@ -3,16 +3,7 @@ import "../Styles/homeStyle.css";
 import ola2 from "../IMAGES/ola2.svg";
 import ola3 from "../IMAGES/ola3.svg";
 import Footer from "./Footer";
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// // Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-// // import required modules
-// import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Corousel from "../Components/Corousel";
 const Home = () => {
   return (
     <div>
@@ -90,71 +81,13 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* <Corousel/> */}
         <div className="row">
           <br></br>
         </div>
       </div>
 
-      {/* <div className="container fluid">
-        <div
-          id="carouselExampleInterval"
-          className="carousel slide"
-          data-bs-ride="carousel"
-          
-        >
-          <div className="carousel-inner bg-primary" style={{height:"300px",width:"100%"}}>
-            <div className="carousel-item active" data-bs-interval="2000">
-              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
-            </div>
-            <div className="carousel-item" data-bs-interval="2000">
-              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
-            </div>
-            <div className="carousel-item" data-bs-interval="2000">
-              <img src={ola2} className="d-block" width={"100%"} height={"300px"} alt="..." />
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div> */}
-      {/* <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={ola2} alt="e-car" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={ola2} alt="e-car" />
-        </SwiperSlide>
-      </Swiper> */}
-      <Footer />
+      <Footer/>
     </div>
   );
 };

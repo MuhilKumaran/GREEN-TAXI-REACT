@@ -1,24 +1,56 @@
-import React from "react";
+
+
+import React, { useState } from "react";
+import axios from "axios";
 import "../Styles/supportStyle.css";
 import Footer from "./Footer";
+
 const Support = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    city: "",
+    feedback: "complaint",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/v1/customer/support",
+        formData
+      );
+      console.log(formData);
+      console.log("Form submission response:", response);
+    } catch (error) {
+      console.log(formData);
+      console.error("Error submitting form:", error);
+    }
+  };
+
   return (
     <div>
-      <br></br>
+      <br />
       <div className="container px-4">
-        
         <div className="row justify-content-center">
-        
           <div className="col-md-6 form-container">
-            <form action="#" method="post">
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
-              <h2 className="text-center mb-4 sup-tit">Support</h2>
+                <h2 className="text-center mb-4 sup-tit">Support</h2>
                 <label htmlFor="name">Name:</label>
                 <input
                   type="text"
                   className="form-control"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -29,6 +61,8 @@ const Support = () => {
                   className="form-control"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -40,6 +74,8 @@ const Support = () => {
                   id="mobile"
                   name="mobile"
                   pattern="[0-9]{10}"
+                  value={formData.mobile}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -50,6 +86,8 @@ const Support = () => {
                   className="form-control"
                   id="city"
                   name="city"
+                  value={formData.city}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -59,6 +97,8 @@ const Support = () => {
                   className="form-select"
                   id="feedback"
                   name="feedback"
+                  value={formData.feedback}
+                  onChange={handleChange}
                   required
                 >
                   <option value="complaint">Complaint</option>
@@ -72,6 +112,8 @@ const Support = () => {
                   id="message"
                   name="message"
                   rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                 ></textarea>
               </div>
