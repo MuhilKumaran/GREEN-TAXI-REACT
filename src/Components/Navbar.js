@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/navbarStyle.css";
 
-const Navbar = () => {
+const Navbar = ({ loggedIn, setLoggedIn }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
   const handleNavCollapse = () => {
     setIsNavCollapsed(!isNavCollapsed);
   };
 
   const closeNavbar = () => {
     setIsNavCollapsed(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setLoggedIn(false);
+    window.location.href = "/login";
+    closeNavbar();
   };
 
   return (
@@ -86,16 +92,32 @@ const Navbar = () => {
                   About US
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="/signup"
-                  className="nav-link nav-text"
-                  onClick={closeNavbar}
-                  style={{ color: "snow" }}
-                >
-                  Sign Up/Login
-                </Link>
-              </li>
+              {!loggedIn ? (
+                <li className="nav-item">
+                  <Link
+                    to="/signup"
+                    className="nav-link nav-text"
+                    onClick={closeNavbar}
+                    style={{ color: "snow" }}
+                  >
+                    Sign Up/Login
+                  </Link>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <Link
+                    to="#"
+                    className="nav-link nav-text"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent navigation
+                      handleLogout(); // Call the logout function
+                    }}
+                    style={{ color: "snow" }}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

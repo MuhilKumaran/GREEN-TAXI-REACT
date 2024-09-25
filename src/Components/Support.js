@@ -1,5 +1,4 @@
-
-
+import { failureAlert, successAlert } from "../Alerts/Alerts";
 import React, { useState } from "react";
 import axios from "axios";
 import "../Styles/supportStyle.css";
@@ -18,19 +17,34 @@ const Support = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const token = localStorage.getItem("token");
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(
         "http://localhost:8000/api/v1/customer/support",
-        formData
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Add token to Authorization header
+          },
+        }
       );
       console.log(formData);
+      successAlert("Support Request Sent");
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        city: "",
+        feedback: "complaint",
+        message: "",
+      });
       console.log("Form submission response:", response);
     } catch (error) {
       console.log(formData);
-      console.error("Error submitting form:", error);
+      failureAlert("Error in Submitting Review");
+      console.error("Error Sending Support Request:", error);
     }
   };
 

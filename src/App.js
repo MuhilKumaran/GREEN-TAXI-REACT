@@ -12,21 +12,25 @@ import Driver from "./Components/Driver";
 import PrivacyAndPolicy from "./Components/PrivacyAndPolicy";
 import TermsAndCondition from "./Components/TermsAndCondition";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 function App() {
+  const token = localStorage.getItem("token");
+  const [loggedIn, setLoggedIn] = useState(token ? true:false);
+
   return (
     <>
-      <Navbar />
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/booking" Component={Booking} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/aboutus" Component={AboutUS} />
-        <Route path="/signup" Component={SignUp} />
-        <Route path="/login" Component={Login} />
-        <Route path="/support" Component={Support} />
-        <Route path="/becomeDriver" Component={Driver}/>
-        <Route path="/privacyAndPolicy" Component={PrivacyAndPolicy}/>
-        <Route path="/termsAndCondition" Component={TermsAndCondition}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/aboutus" element={<AboutUS />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/becomeDriver" element={<Driver />} />
+        <Route path="/privacyAndPolicy" element={<PrivacyAndPolicy />} />
+        <Route path="/termsAndCondition" element={<TermsAndCondition />} />
       </Routes>
     </>
   );

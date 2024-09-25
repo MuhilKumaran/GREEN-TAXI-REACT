@@ -1,9 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios"; // Axios for making HTTP requests
 import OLAA from "../IMAGES/OLAA.jpg";
 import "../Styles/bookingStyle.css";
 import Footer from "./Footer";
 import Corousel from "../Components/Corousel";
+
 const Booking = () => {
+  // State to store the entire form data as an object
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    pickDate: "",
+    pickLocation: "mylocation",
+    pickTime: "",
+    dropCity: "Coimbatore",
+    comment: "",
+  });
+
+  // Generic onChange handler to update the form data object
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData, // Spread the existing form data
+      [name]: value, // Dynamically update the specific field based on the input name
+    });
+  };
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    try {
+      // Send the formData object to the backend
+      const token = localStorage.getItem("token");
+      const response = await axios.post(
+        "http://localhost:8000/api/v1/customer/booking",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Add token to Authorization header
+          },
+        }
+      );
+      console.log(response.data);
+      alert("Booking successful!");
+    } catch (error) {
+      console.error("Error during booking", error);
+      alert("Booking failed.");
+    }
+  };
+
   return (
     <div className="body-box">
       <div className="container-fluid px-5">
@@ -12,11 +59,11 @@ const Booking = () => {
         </div>
         <div className="row">
           <div className="col-md-8 col-12 info ">
-            <h2>CONVINIENT-BOOKING, {"  "} ON-TIME PICK-UP</h2>
+            <h2>CONVENIENT-BOOKING, {"  "} ON-TIME PICK-UP</h2>
             <h2 style={{ textIndent: "20px" }}>
               <span style={{ color: "#41b31d" }}>Green Taxi</span> Provides a
-              Seamless and Convinient Booking of Cabs . Enjoy Your Door Step
-              Pick Up
+              Seamless and Convenient Booking of Cabs. Enjoy Your Door Step Pick
+              Up
             </h2>
           </div>
           <div className="col-md-4 col-12">
@@ -47,7 +94,7 @@ const Booking = () => {
             <h2 className="mb-4 text-center" style={{ fontStyle: "italic" }}>
               START BOOKING
             </h2>
-            <form action="#" method="post">
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Name
@@ -55,8 +102,12 @@ const Booking = () => {
                 <input
                   type="text"
                   className="form-control"
+                  required
                   id="name"
+                  name="name" // Ensure 'name' matches with the formData property
                   placeholder="Enter your name"
+                  value={formData.name} // Bind state
+                  onChange={handleChange} // Use the same handler for all inputs
                 />
               </div>
               <div className="mb-3">
@@ -66,62 +117,91 @@ const Booking = () => {
                 <input
                   type="tel"
                   className="form-control"
+                  required
                   id="mobile"
+                  name="mobile"
                   placeholder="1234567890"
+                  value={formData.mobile}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="pick-date" className="form-label">
-                  Pick Up Date
+                <label htmlFor="mobile" className="form-label">
+                  Email
                 </label>
-                <input type="date" className="form-control" id="pick-date" />
+                <input
+                  type="email"
+                  className="form-control"
+                  required
+                  id="email"
+                  name="email"
+                  placeholder="abc@gmail.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
               <div className="mb-3">
-                <label htmlFor="drop-city" className="form-label">
+                <label htmlFor="pickDate" className="form-label">
+                  Pick Up Date
+                </label>
+                <input
+                  type="date"
+                  className="form-control"
+                  required
+                  id="pickDate"
+                  name="pickDate"
+                  value={formData.pickDate}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="pickLocation" className="form-label">
                   Pick Up Location
                 </label>
-                <br></br>
-
-                <select className="form-select">
-                  <option value="mylocation" className="coimbatore">
-                    My Location
-                  </option>
-                  <option value="Trichy" className="trichy">
-                    Trichy
-                  </option>
-                  <option value="Chennai" className="chennai">
-                    Chennai
-                  </option>
-                  <option value="Tanjore" className="tanjore">
-                    Tanjore
-                  </option>
+                <select
+                  className="form-select"
+                  required
+                  id="pickLocation"
+                  name="pickLocation"
+                  value={formData.pickLocation}
+                  onChange={handleChange}
+                >
+                  <option value="mylocation">My Location</option>
+                  <option value="Trichy">Trichy</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Tanjore">Tanjore</option>
                 </select>
               </div>
               <div className="mb-3">
-                <label htmlFor="pick-time" className="form-label">
+                <label htmlFor="pickTime" className="form-label">
                   Pick Up Time
                 </label>
-                <input type="time" className="form-control" id="pick-date" />
+                <input
+                  type="time"
+                  className="form-control"
+                  required
+                  id="pickTime"
+                  name="pickTime"
+                  value={formData.pickTime}
+                  onChange={handleChange}
+                />
               </div>
               <div className="mb-3">
-                <label htmlFor="drop-city" className="form-label">
-                  Drop city
+                <label htmlFor="dropCity" className="form-label">
+                  Drop City
                 </label>
-                <br></br>
-
-                <select className="form-select">
-                  <option value="Coimbatore" className="coimbatore">
-                    Coimbatore
-                  </option>
-                  <option value="Trichy" className="trichy">
-                    Trichy
-                  </option>
-                  <option value="Chennai" className="chennai">
-                    Chennai
-                  </option>
-                  <option value="Tanjore" className="tanjore">
-                    Tanjore
-                  </option>
+                <select
+                  className="form-select"
+                  required
+                  id="dropCity"
+                  name="dropCity"
+                  value={formData.dropCity}
+                  onChange={handleChange}
+                >
+                  <option value="Coimbatore">Coimbatore</option>
+                  <option value="Trichy">Trichy</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Tanjore">Tanjore</option>
                 </select>
               </div>
               <div className="mb-3">
@@ -130,9 +210,12 @@ const Booking = () => {
                 </label>
                 <textarea
                   className="form-control"
-                  id="message"
+                  id="comment"
+                  name="comment"
                   rows="2"
                   placeholder="Enter your message"
+                  value={formData.comment}
+                  onChange={handleChange}
                 ></textarea>
               </div>
               <center>
@@ -155,4 +238,3 @@ const Booking = () => {
 };
 
 export default Booking;
-

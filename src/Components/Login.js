@@ -4,9 +4,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { failureAlert, successAlert } from "../Alerts/Alerts";
-const Login = () => {
+const Login = ({setLoggedIn}) => {
   const [formData, setFormData] = useState({
-    userType: "customers",
     email: "",
     password: "",
   });
@@ -26,11 +25,13 @@ const Login = () => {
         formData
       );
       console.log(response.data.message);
+      const token = response.data.accessToken;
+      localStorage.setItem("token", token);
+      setLoggedIn(true);
       successAlert("Login Succesfull");
       // Handle successful login (e.g., redirect to dashboard page)
     } catch (error) {
-      failureAlert(error.response.data.message);
-      console.log(error.response.data.message);
+      failureAlert("Login Failed, Try again");
       // console.error("Error:", error);
     }
   };
@@ -41,20 +42,6 @@ const Login = () => {
         <h2 className="text-center mb-4 login-tit">Login</h2>
         <form onSubmit={handleSubmit}>
           {/* {error && <div className="alert alert-danger">{error}</div>} */}
-          <div className="form-group">
-            <select
-              className="form-select"
-              id="userRole"
-              name="userType"
-              value={formData.userType}
-              onChange={handleChange}
-              required
-            >
-              <option value="customer">Customer</option>
-              <option value="admin">Admin</option>
-              <option value="driver">Driver</option>
-            </select>
-          </div>
           <div className="form-group">
             <label htmlFor="emailMobile">Email</label>
             <input

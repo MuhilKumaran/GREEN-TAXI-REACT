@@ -69,8 +69,8 @@ const Corousel = () => {
         const response = await axios.get(
           "http://localhost:8000/api/v1/customer/support"
         );
-        console.log(response.data);
-        setReviews(response.data);
+        console.log(response.data.result);
+        setReviews(response.data.result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
