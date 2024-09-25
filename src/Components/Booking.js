@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Corousel from "../Components/Corousel";
 const Booking = () => {
   return (
-    <div>
+    <div className="body-box">
       <div className="container-fluid px-5">
         <div className="row">
           <br></br>

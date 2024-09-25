@@ -6,8 +6,8 @@ import Footer from "./Footer";
 import Corousel from "../Components/Corousel";
 const Home = () => {
   return (
-    <div>
-      <div className="container-fluid px-5">
+    <div className="body-box">
+      <div className="container-fluid px-5 ">
         <div className="row">
           <br></br>
         </div>
