@@ -4,6 +4,7 @@ import OLAA from "../IMAGES/OLAA.jpg";
 import "../Styles/bookingStyle.css";
 import Footer from "./Footer";
 import Corousel from "../Components/Corousel";
+import { failureAlert, successAlert } from "../Alerts/Alerts";
 
 const Booking = () => {
   // State to store the entire form data as an object
@@ -18,6 +19,9 @@ const Booking = () => {
     comment: "",
   });
 
+  // State to manage loading status
+  const [loading, setLoading] = useState(false);
+
   // Generic onChange handler to update the form data object
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +34,7 @@ const Booking = () => {
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission
+    setLoading(true); // Set loading to true when booking starts
 
     try {
       // Send the formData object to the backend
@@ -44,10 +49,14 @@ const Booking = () => {
         }
       );
       console.log(response.data);
-      alert("Booking successful!");
+      successAlert("Booking Successful");
     } catch (error) {
-      console.error("Error during booking", error);
-      alert("Booking failed.");
+      if (error.response.data.error=="Invalid Token")
+        failureAlert("Login To Book");
+      else
+        failureAlert("Booking Failed");
+    } finally {
+      setLoading(false); // Set loading to false when booking completes
     }
   };
 
@@ -95,6 +104,7 @@ const Booking = () => {
               START BOOKING
             </h2>
             <form onSubmit={handleSubmit}>
+              {/* Form fields remain unchanged */}
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Name
@@ -126,7 +136,7 @@ const Booking = () => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="mobile" className="form-label">
+                <label htmlFor="email" className="form-label">
                   Email
                 </label>
                 <input
@@ -219,8 +229,8 @@ const Booking = () => {
                 ></textarea>
               </div>
               <center>
-                <button type="submit" className="btn btn-primary sub">
-                  Book Now
+                <button type="submit" className="btn btn-primary sub" disabled={loading}>
+                  {loading ? "Booking..." : "Book Now"} {/* Change button text based on loading state */}
                 </button>
               </center>
               <br></br>
